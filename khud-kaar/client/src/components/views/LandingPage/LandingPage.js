@@ -19,20 +19,20 @@ function LandingPage() {
 
   const [Filters, setFilters] = useState({
     category: [],
-    price: []
+    price: [],
   });
 
   useEffect(() => {
     const variables = {
       skip: Skip,
-      limit: Limit
+      limit: Limit,
     };
 
     getProducts(variables);
   }, []);
 
-  const getProducts = variables => {
-    Axios.post('/api/product/getProducts', variables).then(response => {
+  const getProducts = (variables) => {
+    Axios.post('/api/product/getProducts', variables).then((response) => {
       if (response.data.success) {
         if (variables.loadMore) {
           setProducts([...Products, ...response.data.products]);
@@ -52,7 +52,7 @@ function LandingPage() {
     const variables = {
       skip: skip,
       limit: Limit,
-      loadMore: true
+      loadMore: true,
     };
     getProducts(variables);
     setSkip(skip);
@@ -76,17 +76,17 @@ function LandingPage() {
     );
   });
 
-  const showFilteredResults = filters => {
+  const showFilteredResults = (filters) => {
     const variables = {
       skip: 0,
       limit: Limit,
-      filters: filters
+      filters: filters,
     };
     getProducts(variables);
     setSkip(0);
   };
 
-  const handlePrice = value => {
+  const handlePrice = (value) => {
     const data = price;
     let array = [];
 
@@ -115,12 +115,12 @@ function LandingPage() {
     setFilters(newFilters);
   };
 
-  const updateSearchTerms = newSearchTerm => {
+  const updateSearchTerms = (newSearchTerm) => {
     const variables = {
       skip: 0,
       limit: Limit,
       filters: Filters,
-      searchTerm: newSearchTerm
+      searchTerm: newSearchTerm,
     };
 
     setSkip(0);
@@ -144,13 +144,13 @@ function LandingPage() {
         <Col lg={12} xs={24}>
           <CheckBox
             list={category}
-            handleFilters={filters => handleFilters(filters, 'category')}
+            handleFilters={(filters) => handleFilters(filters, 'category')}
           />
         </Col>
         <Col lg={12} xs={24}>
           <RadioBox
             list={price}
-            handleFilters={filters => handleFilters(filters, 'price')}
+            handleFilters={(filters) => handleFilters(filters, 'price')}
           />
         </Col>
       </Row>
@@ -160,7 +160,7 @@ function LandingPage() {
         style={{
           display: 'flex',
           justifyContent: 'flex-end',
-          margin: '1rem auto'
+          margin: '1rem auto',
         }}
       >
         <SearchFeature refreshFunction={updateSearchTerms} />
@@ -172,7 +172,7 @@ function LandingPage() {
             display: 'flex',
             height: '300px',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
           }}
         >
           <h2>No post yet...</h2>

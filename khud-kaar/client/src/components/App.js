@@ -2,14 +2,19 @@ import React, { Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Auth from '../hoc/auth';
 import AdminAuth from '../hoc/adminauth';
+import DetailProductPage from './views/DetailProductPage/DetailProductPage';
 
 // pages for this product
 import LandingPage from './views/LandingPage/LandingPage.js';
 import LoginPage from './views/LoginPage/LoginPage.js';
 import RegisterPage from './views/RegisterPage/RegisterPage.js';
+
 import AdminLoginPage from './views/AdminLoginPage/AdminLoginPage.js';
 import AdminRegisterPage from './views/AdminRegisterPage/AdminRegisterPage.js';
 import AdminDashboard from './views/AdminDashboard/AdminDashboard.js';
+
+import CartPage from './views/CartPage/CartPage';
+import OrderConfirmationPage from './views/OrderConfirmationPage/OrderConfirmationPage.js';
 
 import NavBar from './views/NavBar/NavBar';
 import Footer from './views/Footer/Footer';
@@ -27,13 +32,23 @@ function App() {
           <Route exact path='/register' component={Auth(RegisterPage, false)} />
           <Route
             exact
+            path='/product/upload'
+            component={AdminAuth(UploadProductPage, true)}
+          />
+          <Route
+            exact
+            path='/product/:productId'
+            component={Auth(DetailProductPage, null)}
+          />
+          <Route
+            exact
             path='/admin/login'
             component={AdminAuth(AdminLoginPage, false)}
           />
           <Route
             exact
             path='/admin/register'
-            component={AdminAuth(AdminRegisterPage, false)}
+            component={AdminAuth(AdminRegisterPage, true)}
           />
 
           <Route
@@ -41,12 +56,12 @@ function App() {
             path='/admin/admindashboard'
             component={AdminAuth(AdminDashboard, true)}
           />
-
           <Route
             exact
-            path='/product/upload'
-            component={AdminAuth(UploadProductPage, true)}
+            path='/user/cart/orderconfirmation'
+            component={Auth(OrderConfirmationPage, true)}
           />
+          <Route exact path='/user/cart' component={Auth(CartPage, true)} />
         </Switch>
       </div>
       <Footer />

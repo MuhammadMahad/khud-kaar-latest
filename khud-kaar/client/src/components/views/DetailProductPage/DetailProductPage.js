@@ -12,13 +12,13 @@ function DetailProductPage(props) {
 
   useEffect(() => {
     Axios.get(`/api/product/products_by_id?id=${productId}&type=single`).then(
-      response => {
+      (response) => {
         setProduct(response.data[0]);
       }
     );
   }, []);
 
-  const addToCartHandler = productId => {
+  const addToCartHandler = (productId) => {
     dispatch(addToCart(productId));
   };
 

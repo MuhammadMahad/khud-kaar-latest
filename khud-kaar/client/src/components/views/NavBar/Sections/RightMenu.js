@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Menu } from 'antd';
+import { Menu, Icon, Badge } from 'antd';
 import axios from 'axios';
 import { USER_SERVER } from '../../../Config';
 import { ADMIN_SERVER } from '../../../Config';
@@ -49,6 +49,9 @@ function RightMenu(props) {
         <Menu.Item key='upload'>
           <a href='/product/upload'>Upload Product</a>
         </Menu.Item>
+        <Menu.Item key='registeradmin'>
+          <a href='/admin/register'>Register a new admin</a>
+        </Menu.Item>
         <Menu.Item key='adminlogout'>
           <a onClick={adminlogoutHandler}>Admin Logout</a>
         </Menu.Item>
@@ -57,6 +60,16 @@ function RightMenu(props) {
   } else if (user.userData && user.userData.isAuth) {
     return (
       <Menu mode={props.mode}>
+        <Menu.Item key='cart' style={{ paddingBottom: 3 }}>
+          <Badge count={user.userData && user.userData.cart.length}>
+            <a href='/user/cart' style={{ marginRight: -22, color: '#667777' }}>
+              <Icon
+                type='shopping-cart'
+                style={{ fontSize: 30, marginBottom: 3 }}
+              />
+            </a>
+          </Badge>
+        </Menu.Item>
         <Menu.Item key='logout'>
           <a onClick={logoutHandler}>Logout</a>
         </Menu.Item>
