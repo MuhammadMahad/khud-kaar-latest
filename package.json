@@ -1,5 +1,6 @@
 {
   "name": "react-boiler-plate",
+  "homepage": ".",
   "version": "1.0.0",
   "description": "react boiler plate",
   "main": "index.js",
