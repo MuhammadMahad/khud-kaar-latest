@@ -23,7 +23,7 @@ function NavBar() {
     >
       <div className='menu__logo'>
         <a href='/'>
-          <img style={{ width: '90px', height: '90px' }} src={logo} alt='' />
+          <img style={{ width: '100px', height: '100px' }} src={logo} alt='' />
         </a>
       </div>
       <div className='menu__container'>
