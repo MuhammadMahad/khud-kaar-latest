@@ -4,11 +4,13 @@ const { Product } = require('../models/Product');
 const multer = require('multer');
 const { auth } = require('../middleware/auth');
 const { authadmin } = require('../middleware/authadmin');
+const path = require('path');
 
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    // cb(null, 'uploads/');
-    cb(null, path.resolve(__dirname, '../uploads'));
+    // cb(null, '../../uploads/');
+    cb(null, path.resolve(__dirname, '../../uploads/'));
+    // console.log(path.resolve(__dirname, '../../uploads/'));
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}_${file.originalname}`);
@@ -37,9 +39,12 @@ router.post('/uploadImage', authadmin, (req, res) => {
     if (err) {
       return res.json({ success: false, err });
     }
+    console.log(res.req.file);
     return res.json({
       success: true,
-      image: res.req.file.path,
+      // image: res.req.file.path,
+      image: `/uploads/${res.req.file.filename}`,
+
       filename: res.req.file.filename,
     });
   });
