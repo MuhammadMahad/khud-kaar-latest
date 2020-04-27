@@ -131,7 +131,8 @@ function LandingPage() {
 
   return (
     <div style={{ width: '75%', margin: '3rem auto' }}>
-      <div style={{ textAlign: 'center', paddingTop: '30px' }}>
+      {/* <div style={{ textAlign: 'center', paddingTop: '30px' }}> */}
+      <div style={{ textAlign: 'center' }}>
         <h2>
           {' '}
           Let's Fight Poverty! <Icon type='rocket' />{' '}
