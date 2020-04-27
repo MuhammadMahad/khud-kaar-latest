@@ -50,7 +50,7 @@ app.use('/uploads', express.static(path.resolve(__dirname, '../uploads')));
 // Set static folder
 app.use(express.static(path.resolve(__dirname, '../client', 'build')));
 
-// index.html for all page routes
+// // index.html for all page routes
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'));
 });
