@@ -5,24 +5,26 @@ import Axios from 'axios';
 function FileUpload(props) {
   const [Images, setImages] = useState([]);
 
-  const onDrop = files => {
+  const onDrop = (files) => {
     let formData = new FormData();
     const config = {
-      header: { 'content-type': 'multipart/form-data' }
+      header: { 'content-type': 'multipart/form-data' },
     };
     formData.append('file', files[0]);
     //save the Image we chose inside the Node Server
-    Axios.post('/api/product/uploadImage', formData, config).then(response => {
-      if (response.data.success) {
-        setImages([...Images, response.data.image]);
-        props.refreshFunction([...Images, response.data.image]);
-      } else {
-        alert('Failed to save the Image in Server');
+    Axios.post('/api/product/uploadImage', formData, config).then(
+      (response) => {
+        if (response.data.success) {
+          setImages([...Images, response.data.image]);
+          props.refreshFunction([...Images, response.data.image]);
+        } else {
+          alert('Failed to save the Image in Server');
+        }
       }
-    });
+    );
   };
 
-  const onDelete = image => {
+  const onDelete = (image) => {
     const currentIndex = Images.indexOf(image);
 
     let newImages = [...Images];
@@ -43,7 +45,7 @@ function FileUpload(props) {
               border: '1px solid lightgray',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
             }}
             {...getRootProps()}
           >
@@ -58,14 +60,14 @@ function FileUpload(props) {
           display: 'flex',
           width: '350px',
           height: '240px',
-          overflowX: 'scroll'
+          overflowX: 'scroll',
         }}
       >
         {Images.map((image, index) => (
           <div onClick={() => onDelete(image)}>
             <img
               style={{ minWidth: '300px', width: '300px', height: '240px' }}
-              src={`http://localhost:5000/${image}`}
+              src={`/${image}`}
               alt={`productImg-${index}`}
             />
           </div>
