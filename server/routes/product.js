@@ -43,7 +43,7 @@ router.post('/uploadImage', authadmin, (req, res) => {
     return res.json({
       success: true,
       // image: res.req.file.path,
-      image: `/uploads/${res.req.file.filename}`,
+      image: `uploads/${res.req.file.filename}`,
 
       filename: res.req.file.filename,
     });
