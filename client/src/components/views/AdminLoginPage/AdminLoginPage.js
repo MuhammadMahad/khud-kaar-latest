@@ -174,7 +174,6 @@ function AdminLoginPage(props) {
                     Log in
                   </Button>
                 </div>
-                Or <a href='/admin/register'>register now!</a>
               </Form.Item>
             </form>
           </div>
