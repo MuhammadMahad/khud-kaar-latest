@@ -26,6 +26,8 @@ import Footer from './views/Footer/Footer';
 import UploadProductPage from './views/UploadProductPage/UploadProductPage';
 
 import AboutUs from './views/AboutUs/AboutUs.js';
+import ContactUs from './views/ContactUs/ContactUs';
+import ContactUsConfirmation from './views/ContactUsConfirmation/ContactUsConfirmation';
 
 function App() {
   return (
@@ -81,7 +83,13 @@ function App() {
             component={Auth(OrderConfirmationPage, true)}
           />
           <Route exact path='/user/cart' component={Auth(CartPage, true)} />
+          <Route
+            exact
+            path='/contactus/confirmation'
+            component={Auth(ContactUsConfirmation, null)}
+          />
           <Route exact path='/aboutus' component={Auth(AboutUs, null)} />
+          <Route exact path='/contactus' component={Auth(ContactUs, null)} />
         </Switch>
       </div>
       <Footer />

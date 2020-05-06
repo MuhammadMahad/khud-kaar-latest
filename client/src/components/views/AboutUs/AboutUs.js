@@ -2,13 +2,12 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div>
+    <div style={{ margin: '40px' }}>
       <br />
       <br />
-      <br />
-      <br />
+
       <h2>About Khudkaar</h2>
-      <p style={{ whiteSpace: 'pre-line' }}>
+      <p>
         {' '}
         Khud Kaar is a social enterprise working to create employment
         opportunities for un-employed and lift them up from scratch. It is
@@ -39,7 +38,7 @@ const AboutUs = () => {
       </p>
       <p>
         {' '}
-        Khud Kaar servers its customers and users as follows:
+        <p> Khud Kaar servers its customers and users as follows:</p>
         <p>
           • Saves time for students as they do not need to go out and visit
           different shops or different markets to get the products they need.{' '}
