@@ -3,6 +3,10 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <div>
+      <br />
+      <br />
+      <br />
+      <br />
       <h2>About Khudkaar</h2>
       <p style={{ whiteSpace: 'pre-line' }}>
         {' '}
@@ -31,17 +35,36 @@ const AboutUs = () => {
         to our vendor which then proceeds the order. There is no online payment
         option yet, so our customers will pay through cash on delivery. The
         amount received would then be distributed by the vendor to seller and
-        delivery person Khud Kaar servers its customers and users as follows: •
-        Saves time for students as they do not need to go out and visit
-        different shops or different markets to get the products they need. •
-        Provides products at cheaper rates than market. • Provides hygienic,
-        fresh and hot food in an era where you don’t get it easily. • Cash on
-        delivery makes sure that you are not being scammed and you get the right
-        product (the one which you ordered). • The training video lectures allow
-        a lot of jobless people to get hand on new skills. • Success stories are
-        here to motivate you to do new things or the current things in a better
-        way. • Provides a safe and secure platform to women to sell their
-        products and earn a reasonable amount.
+        delivery person.
+      </p>
+      <p>
+        {' '}
+        Khud Kaar servers its customers and users as follows:
+        <p>
+          • Saves time for students as they do not need to go out and visit
+          different shops or different markets to get the products they need.{' '}
+        </p>{' '}
+        <p> • Provides products at cheaper rates than market.</p>{' '}
+        <p>
+          • Provides hygienic, fresh and hot food in an era where you don’t get
+          it easily.
+        </p>{' '}
+        <p>
+          • Cash on delivery makes sure that you are not being scammed and you
+          get the right product (the one which you ordered).
+        </p>{' '}
+        <p>
+          • The training video lectures allow a lot of jobless people to get
+          hand on new skills.
+        </p>{' '}
+        <p>
+          • Success stories are here to motivate you to do new things or the
+          current things in a better way.
+        </p>{' '}
+        <p>
+          • Provides a safe and secure platform to women to sell their products
+          and earn a reasonable amount.
+        </p>
       </p>
     </div>
   );
