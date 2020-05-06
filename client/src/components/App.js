@@ -16,6 +16,10 @@ import AdminDashboard from './views/AdminDashboard/AdminDashboard.js';
 import CartPage from './views/CartPage/CartPage';
 import OrderConfirmationPage from './views/OrderConfirmationPage/OrderConfirmationPage.js';
 
+import Blog from './views/Blog/Blog.js';
+import UploadBlogPage from './views/UploadBlogPage/UploadBlogPage.js';
+import DetailBlogPage from './views/DetailBlogPage/DetailBlogPage.js';
+
 import NavBar from './views/NavBar/NavBar';
 import Footer from './views/Footer/Footer';
 
@@ -28,6 +32,9 @@ function App() {
       <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
         <Switch>
           <Route exact path='/' component={Auth(LandingPage, null)} />
+
+          <Route exact path='/blog' component={Auth(Blog, null)} />
+
           <Route exact path='/login' component={Auth(LoginPage, false)} />
           <Route exact path='/register' component={Auth(RegisterPage, false)} />
           <Route
@@ -37,8 +44,18 @@ function App() {
           />
           <Route
             exact
+            path='/blog/upload'
+            component={AdminAuth(UploadBlogPage, true)}
+          />
+          <Route
+            exact
             path='/product/:productId'
             component={Auth(DetailProductPage, null)}
+          />
+          <Route
+            exact
+            path='/blog/:blogId'
+            component={Auth(DetailBlogPage, null)}
           />
           <Route
             exact

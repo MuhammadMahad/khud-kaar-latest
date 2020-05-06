@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu } from 'antd';
+
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -8,6 +9,9 @@ function LeftMenu(props) {
     <Menu mode={props.mode}>
       <Menu.Item key='mail'>
         <a href='/'>Home</a>
+      </Menu.Item>
+      <Menu.Item key='blog'>
+        <a href='/blog'>Blog</a>
       </Menu.Item>
       {/* <SubMenu title={<span>Blogs</span>}>
       <MenuItemGroup title="Item 1">
