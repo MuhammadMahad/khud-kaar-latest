@@ -25,6 +25,8 @@ import Footer from './views/Footer/Footer';
 
 import UploadProductPage from './views/UploadProductPage/UploadProductPage';
 
+import AboutUs from './views/AboutUs/AboutUs.js';
+
 function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -79,6 +81,7 @@ function App() {
             component={Auth(OrderConfirmationPage, true)}
           />
           <Route exact path='/user/cart' component={Auth(CartPage, true)} />
+          <Route exact path='/aboutus' component={Auth(AboutUs, null)} />
         </Switch>
       </div>
       <Footer />
