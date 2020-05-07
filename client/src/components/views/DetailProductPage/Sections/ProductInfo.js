@@ -42,12 +42,10 @@ function ProductInfo(props) {
           </Button>
         </div>
       ) : (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ justifyContent: 'center' }}>
           <h3>
             Please <a href='/login'>sign in</a> to add this product to your cart
           </h3>
-          <br />
-          <br />
           <h3>
             Don't have an account? <a href='/signup'>sign up!</a>{' '}
           </h3>
