@@ -27,7 +27,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage }).single('file');
 
 //=================================
-//             Product
+//             Blog
 //=================================
 
 router.post('/uploadImage', authadmin, (req, res) => {
@@ -108,7 +108,7 @@ router.post('/getBlogs', (req, res) => {
   }
 });
 
-//?id=${productId}&type=single
+//?id=${blogId}&type=single
 //id=12121212,121212,1212121   type=array
 router.get('/blogs_by_id', (req, res) => {
   let type = req.query.type;
@@ -122,7 +122,7 @@ router.get('/blogs_by_id', (req, res) => {
     });
   }
 
-  //we need to find the product information that belong to product Id
+  //we need to find the blog information that belong to blog Id
   Blog.find({ _id: { $in: blogIds } })
     .populate('writer')
     .exec((err, blog) => {

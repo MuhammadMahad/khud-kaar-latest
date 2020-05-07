@@ -60,7 +60,6 @@ function Blog() {
             </a>
           }
         >
-          {/* description={`RS.${product.price}`} */}
           <Meta title={blog.title} />
         </Card>
       </Col>
