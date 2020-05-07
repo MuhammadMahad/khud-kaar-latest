@@ -7,8 +7,8 @@ import CheckBox from './Sections/CheckBox';
 import RadioBox from './Sections/RadioBox';
 import { category, price } from './Sections/Datas';
 import SearchFeature from './Sections/SearchFeature';
-import b from './Asset 1.png';
-import './LandingPage.css';
+// import b from './Asset 1.png';
+// import './LandingPage.css';
 
 const { Meta } = Card;
 
@@ -132,9 +132,9 @@ function LandingPage() {
   };
 
   return (
-    <div className="mobile">
-     <img className="image" src={b} alt='' />
-     </div>
+    // <div className="mobile">
+    //  <img className="image" src={b} alt='' />
+    //  </div>
     <div style={{ width: '75%', margin: '3rem auto' }}>
       {/* <div style={{ textAlign: 'center', paddingTop: '30px' }}> */}
       <div style={{ textAlign: 'center' }}>
