@@ -46,8 +46,9 @@ function ProductInfo(props) {
           <h3>
             Please <a href='/login'>sign in</a> to add this product to your cart
           </h3>
+          <br />
           <h3>
-            Don't have an account? <a href='/login'>sign up!</a>{' '}
+            Don't have an account? <a href='/signup'>sign up!</a>{' '}
           </h3>
         </div>
       )}
