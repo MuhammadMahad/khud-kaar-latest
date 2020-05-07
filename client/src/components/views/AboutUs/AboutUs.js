@@ -1,13 +1,16 @@
 import React from 'react';
+import f1 from './f1.png';
+import f2 from './f2.png';
+import f3 from './f3.png';
+import './AboutUs.css';
 
 const AboutUs = () => {
   return (
     <div style={{ margin: '40px' }}>
       <br />
       <br />
-
-      <h2>About Khudkaar</h2>
-      <p>
+      <h1 style={{ fontFamily: 'Roboto' }}>About Khudkaar</h1>
+      <p style={{ fontSize: '18px', fontFamily: 'Roboto' }}>
         {' '}
         Khud Kaar is a social enterprise working to create employment
         opportunities for un-employed and lift them up from scratch. It is
@@ -35,36 +38,53 @@ const AboutUs = () => {
         option yet, so our customers will pay through cash on delivery. The
         amount received would then be distributed by the vendor to seller and
         delivery person.
-      </p>
-      <p>
+      </p>{' '}
+      <p style={{ fontSize: '18px', fontFamily: 'Roboto' }}>
         {' '}
-        <p> Khud Kaar servers its customers and users as follows:</p>
-        <p>
-          • Saves time for students as they do not need to go out and visit
-          different shops or different markets to get the products they need.{' '}
-        </p>{' '}
-        <p> • Provides products at cheaper rates than market.</p>{' '}
-        <p>
-          • Provides hygienic, fresh and hot food in an era where you don’t get
-          it easily.
-        </p>{' '}
-        <p>
-          • Cash on delivery makes sure that you are not being scammed and you
-          get the right product (the one which you ordered).
-        </p>{' '}
-        <p>
-          • The training video lectures allow a lot of jobless people to get
-          hand on new skills.
-        </p>{' '}
-        <p>
-          • Success stories are here to motivate you to do new things or the
-          current things in a better way.
-        </p>{' '}
-        <p>
-          • Provides a safe and secure platform to women to sell their products
-          and earn a reasonable amount.
-        </p>
+        Khud Kaar servers its customers and users as follows:
       </p>
+      <p style={{ fontSize: '18px', fontFamily: 'Roboto' }}>
+        • Saves time for students as they do not need to go out and visit
+        different shops or different markets to get the products they need.{' '}
+      </p>{' '}
+      <p style={{ fontSize: '18px', fontFamily: 'Roboto' }}>
+        {' '}
+        • Provides products at cheaper rates than market.
+      </p>{' '}
+      <p style={{ fontSize: '18px', fontFamily: 'Roboto' }}>
+        • Provides hygienic, fresh and hot food in an era where you don’t get it
+        easily.
+      </p>{' '}
+      <p style={{ fontSize: '18px', fontFamily: 'Roboto' }}>
+        • Cash on delivery makes sure that you are not being scammed and you get
+        the right product (the one which you ordered).
+      </p>{' '}
+      <p style={{ fontSize: '18px', fontFamily: 'Roboto' }}>
+        • The training video lectures allow a lot of jobless people to get hand
+        on new skills.
+      </p>{' '}
+      <p style={{ fontSize: '18px', fontFamily: 'Roboto' }}>
+        • Success stories are here to motivate you to do new things or the
+        current things in a better way.
+      </p>{' '}
+      <p style={{ fontSize: '18px', fontFamily: 'Roboto' }}>
+        • Provides a safe and secure platform to women to sell their products
+        and earn a reasonable amount.
+      </p>
+      <br />
+      <br />
+      <h1 style={{ fontFamily: 'Roboto' }}>Our Founders:</h1>
+      <div className='row'>
+        <div className='column'>
+          <img src={f1} alt='Wardah Noor' style={{ width: '100%' }} />
+        </div>
+        <div className='column'>
+          <img src={f2} alt='Irfan Ahmed' style={{ width: '100%' }} />
+        </div>
+        <div className='column'>
+          <img src={f3} alt='Hira Ibrahim' style={{ width: '100%' }} />
+        </div>
+      </div>
     </div>
   );
 };
