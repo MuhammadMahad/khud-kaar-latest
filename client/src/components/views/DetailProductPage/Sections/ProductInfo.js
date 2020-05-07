@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Descriptions } from 'antd';
+import { withRouter } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function ProductInfo(props) {
+  const user = useSelector((state) => state.user);
   const [Product, setProduct] = useState({});
 
   useEffect(() => {
@@ -27,16 +30,27 @@ function ProductInfo(props) {
       <br />
       <br />
       <br />
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button
-          size='large'
-          shape='round'
-          type='danger'
-          onClick={addToCarthandler}
-        >
-          Add to Cart
-        </Button>
-      </div>
+      {user.userData && user.userData.isAuth ? (
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Button
+            size='large'
+            shape='round'
+            type='danger'
+            onClick={addToCarthandler}
+          >
+            Add to Cart
+          </Button>
+        </div>
+      ) : (
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <h3>
+            Please <a href='/login'>sign in</a> to add this product to your cart
+          </h3>
+          <h3>
+            Don't have an account? <a href='/login'>sign up!</a>{' '}
+          </h3>
+        </div>
+      )}
     </div>
   );
 }
