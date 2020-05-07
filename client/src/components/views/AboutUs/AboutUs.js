@@ -7,8 +7,6 @@ import './AboutUs.css';
 const AboutUs = () => {
   return (
     <div style={{ margin: '40px' }}>
-      <br />
-      <br />
       <h1>About Khudkaar</h1>
       <div className='Intro'>
         <p>
