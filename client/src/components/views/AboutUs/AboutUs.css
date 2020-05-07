@@ -20,3 +20,11 @@
     width: 100%;
   }
 }
+.Intro p {
+  margin-left: 20px;
+  color: rgb(42, 42, 42);
+}
+
+.Intro {
+  font-size: 1.1em;
+}
