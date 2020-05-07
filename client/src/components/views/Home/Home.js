@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
-import bg1 from './bg1.jpg';
-import bg2 from './bg2.jpg';
+
 // var bg1 = require('./bg1.jpg');
 
 const Home = () => {
@@ -21,13 +20,7 @@ const Home = () => {
   //     setImages(images);
   //   }, []);
   return (
-    <div
-      style={{
-        backgroundImage: 'url(' + bg1 + ')',
-        backgroundSize: '100%',
-        backgroundSize: 'cover',
-      }}
-    >
+    <div>
       {/* <ImageGallery
         style={{ display: 'flex', width: '100%', height: 'auto' }}
         items={Images}
