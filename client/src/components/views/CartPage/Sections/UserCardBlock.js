@@ -19,6 +19,7 @@ function UserCardBlock(props) {
             src={renderCartImage(product.images)}
           />
         </td>
+        <td>{product.title}</td>
         <td>{product.quantity} EA</td>
         <td>RS. {product.price} </td>
         <td>
