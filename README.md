@@ -9,3 +9,5 @@ Instructions for running the project locally:
 8) cd back to root
 9) cd into server folder and run "npm run backend"
 10) Go to http://localhost:8080/ on your browser
+
+The project has been deployed and can be visited here -> https://khud-kaar.herokuapp.com/
