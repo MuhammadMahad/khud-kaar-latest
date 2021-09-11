@@ -11,3 +11,5 @@ Instructions for running the project locally:
 10) Go to http://localhost:8080/ on your browser
 
 The project has been deployed and can be visited here -> https://khud-kaar.herokuapp.com/
+
+Note: Images may appear broken as they are stored by Heroku in a impersistent manner and are deleted on their servers after some time has passed.
