@@ -1,4 +1,9 @@
-Instructions for running the project locally:
+# About
+This is an e-commerce platform built for a non-profit NGO where handicraft and home-made products made by Pakistani women are put up for sale so they can be empowered and have a viable source of income.
+
+It is written primarily in Javascript and developed using the MERN (Mongo Express React Node) technology stack.
+
+# Instructions for running the project locally:
 1) Clone the project from https://github.com/MuhammadMahad/khud-kaar-latest
 2) Open Terminal in the root directory of the project
 3) cd into client folder and run "npm install"
